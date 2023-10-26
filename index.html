@@ -12,10 +12,25 @@
     h2 {
       font-family: calibri;
     }
+    img#banner {
+      width: 1200px;
+      height: 300px;
+      opacity: 0; /* Set the initial opacity to 0 */
+      transition: opacity 1s ease; /* Add a transition effect */
+    }
+    h1 b {
+      display: inline-block;
+    }
   </style>
+  <script>
+    window.onload = function() {
+      var banner = document.getElementById('banner');
+      banner.style.opacity = '1'; /* Change the opacity to 1 to make it fade in */
+    };
+  </script>
 </head>
 <body>
-  <img src="WebBanner2023.png" alt="banner" width="1200" height="300">
+  <img id="banner" src="WebBanner2023.png" alt="banner">
   <h1><b>Eng0018 Computer Laboratory 2023/24</b></h1>
   <h2>Student URN 687834</h2>
   <p>This is a sample text in white Arial font.</p>
@@ -25,6 +40,7 @@
   <hr>
 </body>
 </html>
+
 
 
      

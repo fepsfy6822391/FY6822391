@@ -194,5 +194,33 @@
   <p>
     Fx4U. 2023. Exploring the advantages and disadvantages of using trading robots in Financial Markets - Fx4U. [ONLINE] Available at: https://fx4u.net/robot/advantages-and-disadvantages-of-using-trading-robots/. [Accessed 26 November 2023].
   </p>
+   <script>
+    // Array of slide image URLs
+    var slideImages = ["slide 1.png", "slide 2.png", "slide 3.png", "slide 4.png", "slide 5.png"];
+    var currentSlide = 0;
+
+    function showSlide() {
+      document.getElementById('slide').src = slideImages[currentSlide];
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slideImages.length;
+      showSlide();
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slideImages.length) % slideImages.length;
+      showSlide();
+    }
+
+    // function to show a specific slide based on the button clicked 
+    function showSlideNumber(slideNumber) {
+      currentSlide = slideNumber - 1;
+      showSlide();
+    }
+
+    // call showSlide() to display the first slide 
+    showSlide();
+  </script>
 </body>
 </html>

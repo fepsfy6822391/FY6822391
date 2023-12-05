@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,40 +33,48 @@
       font-size: 32px;
       font-family: 'Calibri', sans-serif;
     }
+
     p {
       text-align: justify;
       font-family: 'Times New Roman', Times, serif;
       font-size: 20px;
     }
+
     .banner {
       text-align: center;
     }
+
     .toc {
       background: #333;
       padding: 10px;
       text-align: center;
       margin-bottom: 20px;
     }
+
     .toc-links a {
       color: white;
       margin: 0 15px;
       text-decoration: none;
     }
+
     img {
       width: 100%;
       height: auto;
       max-width: 1200px;
     }
+
     /* Style to center the image */
     #slide-container {
       text-align: center;
       position: relative;
     }
+
     /* Style for the buttons */
     .button-container {
       text-align: center;
       margin-bottom: 20px;
     }
+
     .button {
       padding: 10px 20px;
       background-color: #4CAF50;
@@ -77,6 +86,7 @@
       margin: 0 5px;
       /* Add some margin between the buttons */
     }
+
     .slide-number-container {
       position: absolute;
       bottom: 0;
@@ -87,11 +97,13 @@
     }
   </style>
 </head>
+
 <body>
   <div class="button-container">
     <button class="button" onclick="prevSlide()">Previous</button>
     <button class="button" onclick="nextSlide()">Next</button>
   </div>
+
   <div id="slide-container">
     <img id="slide" alt="Slide" style="width: 100%; max-width: 800px;">
     <!-- previous and next buttons container -->
@@ -108,9 +120,11 @@
       <button class="button" onclick="showSlideNumber(5)">5</button>
     </div>
   </div>
+
   <div class="banner">
     <img src="REMOVE.png" alt="Banner Image">
   </div>
+  
   <div class="toc">
     <div class="toc-links">
       <a href="#abstract">Abstract</a>

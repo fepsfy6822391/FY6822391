@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,52 +32,40 @@
       font-size: 32px;
       font-family: 'Calibri', sans-serif;
     }
-
     p {
       text-align: justify;
       font-family: 'Times New Roman', Times, serif;
       font-size: 20px;
     }
-
     .banner {
       text-align: center;
     }
-
     .toc {
       background: #333;
       padding: 10px;
       text-align: center;
       margin-bottom: 20px;
     }
-
     .toc-links a {
       color: white;
       margin: 0 15px;
       text-decoration: none;
     }
-
     img {
       width: 100%;
       height: auto;
       max-width: 1200px;
     }
-
     /* Style to center the image */
     #slide-container {
       text-align: center;
       position: relative;
     }
-
     /* Style for the buttons */
     .button-container {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      margin-bottom: -100px;
-      /* Add some margin between the image and buttons */
+      text-align: center;
+      margin-bottom: 20px;
     }
-
     .button {
       padding: 10px 20px;
       background-color: #4CAF50;
@@ -90,7 +77,6 @@
       margin: 0 5px;
       /* Add some margin between the buttons */
     }
-
     .slide-number-container {
       position: absolute;
       bottom: 0;
@@ -101,36 +87,11 @@
     }
   </style>
 </head>
-
 <body>
-  <script>
-    // Array of slide image URLs
-    var slideImages = ["slide 1.png", "slide 2.png", "slide 3.png", "slide 4.png", "slide 5.png"];
-    var currentSlide = 0;
-
-    function showSlide() {
-      document.getElementById('slide').src = slideImages[currentSlide];
-    }
-
-    function nextSlide() {
-      currentSlide = (currentSlide + 1) % slideImages.length;
-      showSlide();
-    }
-
-    function prevSlide() {
-      currentSlide = (currentSlide - 1 + slideImages.length) % slideImages.length;
-      showSlide();
-    }
-
-    // function to show a specific slide based on the button clicked 
-    function showSlideNumber(slideNumber) {
-      currentSlide = slideNumber - 1;
-      showSlide();
-    }
-
-    // call showSlide() to display the first slide 
-    showSlide();
-  </script>
+  <div class="button-container">
+    <button class="button" onclick="prevSlide()">Previous</button>
+    <button class="button" onclick="nextSlide()">Next</button>
+  </div>
   <div id="slide-container">
     <img id="slide" alt="Slide" style="width: 100%; max-width: 800px;">
     <!-- previous and next buttons container -->

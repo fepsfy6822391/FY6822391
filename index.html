@@ -61,6 +61,76 @@
   </style>
 </head>
 <body>
+  <script>
+    //Array of slide image URLs
+    var slideImages = [ "slide 1.png", "slide 2.png" , "slide 3. png" , "slide 4.png" , " slide 5.png"];
+    var currentSlide= 0; 
+    function showSlide() {
+      document.getElementById('slide').src= slideImage[currentSlide];
+    }
+    function nextslide() { 
+      currentslide = (currentslide + 1) % slideImages.length;
+      showSlide(); 
+    } 
+    function prevslide () { 
+      currentSlide =  (currentSlide-1+slideImages.length) %slideimages.length; 
+      showSlide ();
+    }
+    // function to show a specific slide based on the button clicked 
+    function showSlideNumber(slideNumber) {
+      currentSlide = slideNUmber -1 ; 
+      showSlide(); 
+    }
+    // call showSlide() to display the first slide 
+    showSlide(); 
+  </script> 
+  <div id="slide ccontainer">
+    < img id="slide 1.png" alt=" slide 1" style="width: 100%; max-width: 800px :"> 
+    < !-- previous and next buttibs container --> 
+    <div class = "button-container"> 
+      <button class="button" onclick="prevSlide()">previous</button>
+      < button class= "button" onclick="nextSlide()">Next</button>
+    </div> 
+    <!-- slide number buttons container -->
+    <div class="slide-number-container">
+      <button class="button" onclick="showSlideNumber(1)">1</button>
+      <button class="button" onclick="showSlideNumber(2)">2</button>
+      <button class="button" onclick="showSlideNumber(3)">3</button>
+      <button class="button" onclick="showSlideNumber(4)">4</button>
+      <button class="button" onclick="showSlideNumber(5)">5</button>
+    </div>
+  <style>
+    /* Style to center the image */
+#slide-container{
+text-align: center; 
+position: relative;
+}
+/* Style for the buttons */
+.button-container {
+position:  absolute;
+bottom: 0; 
+left: 50%;
+transform: translatex (-50%);
+margin-bottom: -100px; /* Add some margin between the image and buttons */
+}
+.button {
+padding: 10px 20px;
+background-color: #4CAF50;
+color: white; 
+border: none;
+border-radius: 5px; 
+font-size: 16px; 
+cursor: pointer;
+margin: 0 5px; /* Add some margin between the buttons */
+}
+.slide-number-container {
+ position: absolute;
+bottom: 0; 
+left: 50%;
+transform: translateX(-50%);
+margin-bottom: -50px; /* Add some margin between the slide number buttons and the image */
+}
+</style>     
   <div class="banner">
     <img src="REMOVE.png" alt="Banner Image"> 
   </div>

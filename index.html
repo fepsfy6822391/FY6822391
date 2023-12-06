@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,8 +13,7 @@
       padding: 20px;
     }
 
-    h2,
-    h3 {
+    h2, h3 {
       font-family: 'Calibri', sans-serif;
       text-align: justify;
     }
@@ -97,34 +95,10 @@
     }
   </style>
 </head>
-
 <body>
-  <div class="button-container">
-    <button class="button" onclick="prevSlide()">Previous</button>
-    <button class="button" onclick="nextSlide()">Next</button>
-  </div>
-
-  <div id="slide-container">
-    <img id="slide" alt="Slide" style="width: 100%; max-width: 800px;">
-    <!-- previous and next buttons container -->
-    <div class="button-container">
-      <button class="button" onclick="prevSlide()">Previous</button>
-      <button class="button" onclick="nextSlide()">Next</button>
-    </div>
-    <!-- slide number buttons container -->
-    <div class="slide-number-container">
-      <button class="button" onclick="showSlideNumber(1)">1</button>
-      <button class="button" onclick="showSlideNumber(2)">2</button>
-      <button class="button" onclick="showSlideNumber(3)">3</button>
-      <button class="button" onclick="showSlideNumber(4)">4</button>
-      <button class="button" onclick="showSlideNumber(5)">5</button>
-    </div>
-  </div>
-
   <div class="banner">
     <img src="REMOVE.png" alt="Banner Image">
   </div>
-  
   <div class="toc">
     <div class="toc-links">
       <a href="#abstract">Abstract</a>
@@ -222,5 +196,19 @@
     // call showSlide() to display the first slide 
     showSlide();
   </script>
+   <div id="slide-container">
+    <img id="slide" alt="Slide" style="width: 100%; max-width: 800px;">
+    <!-- Previous and next buttons container -->
+    <div class="button-container">
+      <button class="button" onclick="prevSlide()">Previous</button>
+      <button class="button" onclick="nextSlide()">Next</button>
+    </div>
+    <!-- Slide number buttons container -->
+    <div class="slide-number-container">
+      <button class="button" onclick="showSlideNumber(1)">1</button>
+      <button class="button" onclick="showSlideNumber(2)">2</button>
+      <button class="button" onclick="showSlideNumber(3)">3</button>
+      <button class="button" onclick="showSlideNumber(4)">4</button>
+      <button class="button" onclick="showSlideNumber(5)">5</button>
 </body>
 </html>
